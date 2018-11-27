@@ -46,7 +46,7 @@ const getSettings = () => {
       items: [
         { title: 'Subject', data: lyricSubject, selected: getItem(lyricSubject) },
         { title: 'Metaphor', data: lyricMetaphor, selected: getItem(lyricMetaphor) },
-        { title: 'Delivery', data: lyricDelivery, selected: getItem(lyricMetaphor) },
+        { title: 'Delivery', data: lyricDelivery, selected: getItem(lyricDelivery) },
       ],
     },
     {
