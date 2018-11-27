@@ -13,6 +13,7 @@ const {
   rhythm,
   scale,
   structure,
+  structureParts,
   texture,
   time,
   wildcard,
@@ -29,15 +30,36 @@ const getItem = (arr) => {
   return shuffle(weightedArr)[0];
 };
 
+const getStructures = () => {
+  const structureArr = [];
+  for (let j = 0; j < 7; j++) {
+    const parts = getItem(structureParts);
+    const order = ['A'];
+    let prev = 'A';
+    for (let i = 0; i < parts; i++) {
+      let part = getItem(structure);
+      if (part === prev) {
+        order.push(getItem(structure));
+      } else {
+        order.push(part);
+      }
+      prev = part;
+    }
+    structureArr.push({ value: order.join(''), weight: 1 });
+  }
+  return structureArr;
+};
+
 const getSettings = () => {
+  const structArr = getStructures();
   return [
     {
       category: 'ATTRIBUTES',
       items: [
-        { title: 'Beats Per Minute', data: clone(bpm), selected: getItem(bpm) },
+        { title: 'Beats Per Minute', data: bpm, selected: getItem(bpm) },
         { title: 'Key', data: key, selected: getItem(key) },
         { title: 'Scale', data: scale, selected: getItem(scale) },
-        { title: 'Structure', data: structure, selected: getItem(structure) },
+        { title: 'Structure', data: structArr, selected: getItem(structArr) },
         { title: 'Time Signature', data: time, selected: getItem(time) },
       ],
     },
@@ -67,6 +89,15 @@ const getSettings = () => {
   ];
 }
 
+const getSummary = (settings) => {
+  const summary = [];
+  settings.forEach((setting) => {
+    const { items } = setting;
+    items.forEach(item => summary.push(`${item.title}: ${item.selected}`));
+  });
+  return summary;
+}
+
 const generateSong = () => {
   const song = [];
   Object.keys(data).forEach((key) => {
@@ -75,5 +106,5 @@ const generateSong = () => {
   return song;
 };
 
-export { getSettings };
+export { getSettings, getSummary };
 export default generateSong;

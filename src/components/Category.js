@@ -12,6 +12,8 @@ import Instruction from './Instruction';
 
 const styles = theme => ({
   root: {
+    margin: '0 auto',
+    maxWidth: '600px',
     width: '100%',
     textAlign: 'left',
   },
@@ -34,8 +36,7 @@ class Category extends React.Component {
     return (
       <div className={classes.root}>
         <List
-          component="nav"
-          subheader={<ListSubheader component="div">{ title }</ListSubheader>}
+          subheader={<ListSubheader color="primary" component="div" disableSticky>{ title }</ListSubheader>}
         >
           { items.map(item => (<Instruction key={item.title} items={item.data} selected={item.selected} title={item.title}/>)) }
         </List>
