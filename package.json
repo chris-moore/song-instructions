@@ -1,5 +1,5 @@
 {
-  "name": "create-react-app",
+  "name": "song-instructions-generator",
   "version": "3.2.2",
   "private": true,
   "dependencies": {

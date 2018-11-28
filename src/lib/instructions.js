@@ -19,7 +19,7 @@ const {
   wildcard,
 } = data;
 
-const getItem = (arr) => {
+const getWeightedArray = (arr) => {
   const weightedArr = [];
   arr.forEach(item => {
     const { value, weight } = item;
@@ -27,6 +27,11 @@ const getItem = (arr) => {
       weightedArr.push(value);
     }
   });
+  return weightedArr;
+};
+
+const getItem = (arr) => {
+  const weightedArr = getWeightedArray(arr);
   return shuffle(weightedArr)[0];
 };
 

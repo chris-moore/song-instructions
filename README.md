@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Yarn [https://yarnpkg.com/en/](https://yarnpkg.com/en/):
+Yarn [https://yarnpkg.com/en/](https://yarnpkg.com/en/)
 
 ## Installation and Run
 
