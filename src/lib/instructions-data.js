@@ -171,6 +171,8 @@ const lyricSubject = [
   { value: 'Drunk', weight: 1 },
   { value: 'Coming of age', weight: 1 },
   { value: 'Nightmare fuel', weight: 1 },
+  { value: 'Drive-by blowjob on a bicycle', weight: 1 },
+  { value: 'Someone put shit in my pants', weight: 1 },
   { value: 'Police searching your fannypack for contraband, but your genitals are in it', weight: 1 },
 ];
 

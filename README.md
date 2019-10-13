@@ -1,21 +1,15 @@
-# Create React App example
+# Song Instructions Generator
 
-## How to use
+## Prerequisites
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+Yarn [https://yarnpkg.com/en/](https://yarnpkg.com/en/)
 
-```bash
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/create-react-app
-cd create-react-app
-```
+## Installation and Run
 
-Install it and run:
+`yarn install && yarn start`
 
-```bash
-npm install
-npm run start
-```
+## Built With
 
-## The idea behind the example
+[Material UI](https://material-ui.com/getting-started/installation/) Google's Material UI React Components
 
-[Create React App](https://github.com/facebookincubator/create-react-app) with no build configuration.
+[ReactJS](https://reactjs.org/docs/getting-started.html) Facebook's ReactJS
